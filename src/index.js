@@ -13,6 +13,7 @@ template.innerHTML = `
         .container-app {
           display: flex;
           flex-direction: column;
+          margin-left: 1vw;
         }
     </style>
 
