@@ -11,7 +11,7 @@ template.innerHTML = `
       height: 100vh;
       left: 0;
       top: 0;
-      background: rgb(0,0,0,0.85);
+      background: rgba(0,0,0,0.85);
     }
     .photo-view.open {
       display: block;
@@ -24,6 +24,9 @@ template.innerHTML = `
       background: none;
       color: #fff;
       font-size: 1rem;
+    }
+    button:active {
+      color: grey
     }
     </style>
     <div class="photo-view">
@@ -43,6 +46,7 @@ class PhotoGallery extends HTMLElement {
 
     this.$photoList = this._sR.querySelector(".photo-list");
     this.$photoView = this._sR.querySelector(".photo-view");
+    this.$button = this._sR.querySelector("button");
   }
 
   toggleOpen(event) {
@@ -83,7 +87,11 @@ class PhotoGallery extends HTMLElement {
     });
   }
 
-  connectedCallback() {}
+  connectedCallback() {
+    this.$button.addEventListener("click", () => {
+      this.toggleOpen();
+    });
+  }
 }
 
 window.customElements.define("photo-gallery", PhotoGallery);
