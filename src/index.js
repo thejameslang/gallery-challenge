@@ -1,3 +1,5 @@
+import "./components/photo-thumbnail.js";
+
 const template = document.createElement("template");
 
 template.innerHTML = `
@@ -9,6 +11,7 @@ template.innerHTML = `
 
     <div>
         <h1>hello</h1>
+        <photo-thumbnail></photo-thumbnail>
     </div>
 `;
 
