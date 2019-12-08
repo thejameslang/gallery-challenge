@@ -14,7 +14,9 @@ template.innerHTML = `
       background: rgba(0,0,0,0.85);
     }
     .photo-view.open {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     button {
       position: fixed;
@@ -31,6 +33,7 @@ template.innerHTML = `
     </style>
     <div class="photo-view">
       <button>Close</button>
+      <img>
     </div>
     <ul class="photo-list"></ul>
 `;
@@ -80,6 +83,7 @@ class PhotoGallery extends HTMLElement {
       let $photoThumbnail = document.createElement("photo-thumbnail");
       $photoThumbnail.photo = photoObject.urls.thumb;
       $photoThumbnail.addEventListener("onClick", value => {
+        this._sR.querySelector("img").src = value.detail.photoUrl;
         this.toggleOpen();
         console.log(value);
       });
