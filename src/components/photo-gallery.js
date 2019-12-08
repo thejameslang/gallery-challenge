@@ -6,13 +6,28 @@ template.innerHTML = `
     <style>
     .photo-view {
       display: none;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      left: 0;
+      top: 0;
+      background: rgb(0,0,0,0.85);
     }
     .photo-view.open {
       display: block;
     }
+    button {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      border: none;
+      background: none;
+      color: #fff;
+      font-size: 1rem;
+    }
     </style>
     <div class="photo-view">
-      <h3>whatup</h3>
+      <button>Close</button>
     </div>
     <ul class="photo-list"></ul>
 `;
