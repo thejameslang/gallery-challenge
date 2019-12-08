@@ -1,5 +1,4 @@
 import "./components/photo-gallery";
-import "./components/photo-thumbnail";
 
 const template = document.createElement("template");
 
@@ -12,7 +11,6 @@ template.innerHTML = `
 
     <div>
         <h1>hello</h1>
-        <photo-thumbnail photo=""></photo-thumbnail>
         <photo-gallery></photo-gallery>
     </div>
 `;
@@ -35,11 +33,11 @@ class App extends HTMLElement {
         }
       })
       .then(data => {
-        this._sR.querySelector("photo-thumbnail").photo = data[0].urls.thumb;
+        this._sR.querySelector("photo-gallery").photos = data;
       });
 
     this._sR
-      .querySelector("photo-thumbnail")
+      .querySelector("photo-gallery")
       .addEventListener("onClick", value => console.log(value));
   }
 }
