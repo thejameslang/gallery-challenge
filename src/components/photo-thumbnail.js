@@ -27,11 +27,11 @@ class PhotoThumbnail extends HTMLElement {
   }
 
   get photo() {
-    return this.getAttribute("photo");
+    return JSON.parse(this.getAttribute("photo"));
   }
 
   set photo(value) {
-    this.setAttribute("photo", value);
+    this.setAttribute("photo", JSON.stringify(value));
   }
 
   static get observedAttributes() {
@@ -43,8 +43,10 @@ class PhotoThumbnail extends HTMLElement {
   }
 
   render() {
-    this.$img.src = this.photo;
+    this.$img.src = this.photo.thumb;
   }
+
+  connectedCallback() {}
 }
 
 window.customElements.define("photo-thumbnail", PhotoThumbnail);
