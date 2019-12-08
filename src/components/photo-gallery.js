@@ -40,6 +40,7 @@ class PhotoGallery extends HTMLElement {
     this.photos.forEach(photoObject => {
       let $photoThumbnail = document.createElement("photo-thumbnail");
       $photoThumbnail.photo = photoObject.urls.thumb;
+      $photoThumbnail.addEventListener("onClick", value => console.log(value));
       this.$photoList.appendChild($photoThumbnail);
     });
   }

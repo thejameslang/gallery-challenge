@@ -10,7 +10,7 @@ template.innerHTML = `
     </style>
 
     <div>
-        <h1>hello</h1>
+        <h1>Gallery</h1>
         <photo-gallery></photo-gallery>
     </div>
 `;
@@ -35,10 +35,6 @@ class App extends HTMLElement {
       .then(data => {
         this._sR.querySelector("photo-gallery").photos = data;
       });
-
-    this._sR
-      .querySelector("photo-gallery")
-      .addEventListener("onClick", value => console.log(value));
   }
 }
 
