@@ -1,4 +1,4 @@
-import "./components/photo-thumbnail.js";
+import "./components/photo-gallery";
 
 const template = document.createElement("template");
 
@@ -11,7 +11,7 @@ template.innerHTML = `
 
     <div>
         <h1>hello</h1>
-        <photo-thumbnail></photo-thumbnail>
+        <photo-gallery></photo-gallery>
     </div>
 `;
 
