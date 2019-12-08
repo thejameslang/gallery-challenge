@@ -30,6 +30,9 @@ template.innerHTML = `
     button:active {
       color: grey
     }
+    img {
+      height: 90vh;
+    }
     </style>
     <div class="photo-view">
       <button>Close</button>
