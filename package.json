@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/thejameslang/carnegie-hall/issues"
   },
-  "homepage": "https://github.com/thejameslang/carnegie-hall#readme"
+  "homepage": "https://github.com/thejameslang/carnegie-hall#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
 }
