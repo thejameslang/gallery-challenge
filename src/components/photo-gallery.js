@@ -19,9 +19,20 @@ class PhotoGallery extends HTMLElement {
   }
 
   connectedCallback() {
-    fetch("/photos.json").then(response => {
-      console.log(response);
-    });
+    fetch("/photos.json")
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          return Promise.reject(response);
+        }
+      })
+      .then(data => {
+        console.log(data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 }
 
