@@ -83,7 +83,7 @@ class PhotoGallery extends HTMLElement {
       let $photoThumbnail = document.createElement("photo-thumbnail");
       $photoThumbnail.photo = photoObject.urls;
       $photoThumbnail.addEventListener("onClick", value => {
-        this._sR.querySelector("img").src = value.detail.photoUrl;
+        this._sR.querySelector("img").src = value.detail.photoUrl.regular;
         this.toggleOpen();
         console.log(value);
       });
