@@ -18,7 +18,9 @@ class PhotoThumbnail extends HTMLElement {
     this.$img.addEventListener("click", () => {
       this.dispatchEvent(
         new CustomEvent("onClick", {
-          detail: "Hello from within the photo-thumbnail"
+          detail: {
+            photoUrl: this.photo
+          }
         })
       );
     });
