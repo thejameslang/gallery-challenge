@@ -35,7 +35,7 @@ template.innerHTML = `
       <button>Close</button>
       <img>
     </div>
-    <ul class="photo-list"></ul>
+    <div class="photo-list"></div>
 `;
 
 class PhotoGallery extends HTMLElement {

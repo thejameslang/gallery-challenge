@@ -7,9 +7,16 @@ template.innerHTML = `
         :host {
             font-family: sans-serif;
         }
+        h1 {
+          font-weight: normal
+        }
+        .container-app {
+          display: flex;
+          flex-direction: column;
+        }
     </style>
 
-    <div>
+    <div class="container-app">
         <h1>Gallery</h1>
         <photo-gallery></photo-gallery>
     </div>
