@@ -17,6 +17,12 @@ class PhotoGallery extends HTMLElement {
     this._sR = this.attachShadow({ mode: "open" });
     this._sR.appendChild(template.content.cloneNode(true));
   }
+
+  connectedCallback() {
+    fetch("/photos.json").then(response => {
+      console.log(response);
+    });
+  }
 }
 
 window.customElements.define("photo-gallery", PhotoGallery);
