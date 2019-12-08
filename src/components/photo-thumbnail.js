@@ -12,6 +12,36 @@ class PhotoThumbnail extends HTMLElement {
 
     this._sR = this.attachShadow({ mode: "open" });
     this._sR.appendChild(template.content.cloneNode(true));
+
+    this.$img = this._sR.querySelector("img");
+
+    this.$img.addEventListener("click", () => {
+      this.dispatchEvent(
+        new CustomEvent("onClick", {
+          detail: "Hello from within the photo-thumbnail"
+        })
+      );
+    });
+  }
+
+  get photo() {
+    return this.getAttribute("photo");
+  }
+
+  set photo(value) {
+    this.setAttribute("photo", value);
+  }
+
+  static get observedAttributes() {
+    return ["photo"];
+  }
+
+  attributeChangedCallback(name, oldVal, newVal) {
+    this.render();
+  }
+
+  render() {
+    this.$img.src = this.photo;
   }
 }
 
