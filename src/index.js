@@ -8,12 +8,12 @@ template.innerHTML = `
             font-family: sans-serif;
         }
         h1 {
-          font-weight: normal
+          font-weight: normal;
+          font-size: 3vw;
         }
         .container-app {
           display: flex;
           flex-direction: column;
-          margin-left: 1vw;
         }
     </style>
 

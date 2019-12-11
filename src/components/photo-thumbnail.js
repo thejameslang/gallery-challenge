@@ -6,11 +6,9 @@ template.innerHTML = `
       width: 23vw;
       height: 23vw;
       object-fit: cover;
-      margin-right: 1vw;
-      margin-bottom: 1vw;
     }
     </style>
-    <img src="https://images.unsplash.com/photo-1543517515-d6ff15a98642?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjQ0NDc3fQ&s=eab033bc166a2a3b9c2726e652d08897">
+    <img>
 `;
 
 class PhotoThumbnail extends HTMLElement {
